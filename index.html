@@ -1,4 +1,118 @@
 <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hipotecas - Banco Ciudad (prototipo Daniel Córdoba)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <h1>Hipotecas - Banco Ciudad</h1>
+    <p>Prototipo Daniel Córdoba</p>
+  </header>
+
+  <!-- LOGIN -->
+  <section id="login-section" class="card">
+    <h2>Ingreso al Sistema</h2>
+
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="clave" placeholder="Clave">
+
+    <button onclick="login()">Ingresar</button>
+
+    <div class="demo-users">
+      <h4>Usuarios de prueba</h4>
+      <p><strong>Administrador</strong><br>Usuario: daniel_admin<br>Clave: 1234</p>
+      <p><strong>Escribano/a</strong><br>Usuario: daniel<br>Clave: 1234</p>
+    </div>
+  </section>
+
+  <!-- PANEL ESCRIBANO -->
+  <section id="escribano-panel" class="hidden">
+
+    <div class="topbar">
+      <h2>Panel Escribano/a</h2>
+      <button onclick="logout()">Cerrar sesión</button>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Turnos para Escrituración</h3>
+
+        <label>Seleccionar fecha y hora</label>
+        <input type="datetime-local">
+
+        <p class="info">1 turno habilitado por hora</p>
+
+        <button>Agendar Turno</button>
+        <button class="secondary">Adjuntar Factura de Honorarios</button>
+      </div>
+
+      <div class="card">
+        <h3>Turnos para Cancelación</h3>
+
+        <label>Seleccionar fecha y hora</label>
+        <input type="datetime-local">
+
+        <p class="info">1 turno habilitado cada 5 minutos</p>
+
+        <button>Agendar Turno</button>
+        <button class="secondary">Adjuntar Factura de Honorarios</button>
+      </div>
+
+      <div class="card">
+        <h3>Entregadas al Cliente</h3>
+
+        <input type="text" placeholder="N° de Hipoteca">
+        <input type="text" placeholder="Cliente">
+
+        <button>Registrar Entrega</button>
+      </div>
+
+      <div class="card">
+        <h3>Cambio de Clave</h3>
+
+        <input type="password" placeholder="Clave actual">
+        <input type="password" placeholder="Nueva clave">
+
+        <button>Cambiar Clave</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PANEL ADMIN -->
+  <section id="admin-panel" class="hidden">
+
+    <div class="topbar">
+      <h2>Panel Administrador</h2>
+      <button onclick="logout()">Cerrar sesión</button>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Consulta y Asignación de Legajos</h3>
+
+        <button>Consultar Legajos</button>
+        <button>Cargar Nuevos Legajos</button>
+        <button>Asignar a Escribanía</button>
+      </div>
+
+      <div class="card">
+        <h3>Turnos para Escrituración</h3>
+
+        <button>Ver Turnos Tomados</button>
+      </div>
+
+      <div class="card">
+        <h3>Turnos para Cancelación</h3>
+
         <button>Ver Turnos Tomados</button>
       </div>
 
